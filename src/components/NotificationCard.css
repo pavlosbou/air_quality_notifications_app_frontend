@@ -1,0 +1,73 @@
+.notification-card {
+  display: flex;
+  flex-direction: column; /* Vertical layout */
+  background-color: #f5f2e3;
+  padding: 10px; /* Comfortable padding */
+  margin: 10px 0;
+  border-radius: 8px;
+  max-width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: 20px solid #ff9800; /* Thicker border for emphasis */
+  transition: transform 0.3s ease; /* Slight hover effect */
+}
+
+.notification-card:hover {
+  transform: scale(1.02); /* Slight hover zoom */
+}
+
+.notification-card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px; /* Space between header and content */
+}
+
+.notification-card .header h3 {
+  margin: 0;
+  font-size: 16px; /* Larger font for city/state */
+  color: #333;
+}
+
+
+.notification-card .header .timestamp {
+  font-size: 12px;
+  color: #888;
+}
+
+.notification-card .content {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.notification-card .content p {
+  margin: 4px 0;
+  font-size: 14px; /* Uniform font size */
+  color: #333;
+  width: 48%; /* Two columns */
+}
+
+.notification-card .metrics {
+  font-size: 14px;
+  color: #000;
+}
+
+.notification-card .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff9800;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 22px;
+  align-self: flex-start; /* Align icon to top left */
+}
+
+@media (max-width: 600px) {
+  .notification-card .content p {
+    width: 100%; /* Full width on smaller screens */
+  }
+}

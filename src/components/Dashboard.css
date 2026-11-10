@@ -1,0 +1,237 @@
+/* Apply box-sizing to all elements */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  /* Reset body margin */
+body {
+    margin: 0;
+}  
+  /* Style the top navigation bar */
+.welcome-container {
+    overflow: hidden;
+    background-color: #333;
+    gap: 10px; /* Adds space between items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #f2f2f2;
+}
+
+.welcome-container  p{
+    font-weight: bold;
+    font-size: 1.2rem;
+    
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+  /* Change color on hover */
+.welcome-container button {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+  /* Style the content */
+.content {
+    padding: 10px;
+    min-height: 200px; /* Modify or remove as needed */
+}
+
+.content .selection{
+    display: flex;
+    /* flex-flow: row wrap; */
+}
+
+.content .selection .sel{
+    flex-grow: 15;
+}
+
+
+.content .selection button{
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.subscriptions {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f7f8fa;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.subscriptions h3 {
+    color: #333;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.subscriptions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.city-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+.city-item:hover {
+    background-color: #e9ecef;
+}
+
+.city-link {
+    color: #007bff;
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.city-link:hover {
+    text-decoration: underline;
+}
+
+.unsubscribe-btn {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0 5px;
+    transition: color 0.2s ease;
+}
+
+.unsubscribe-btn:hover {
+    color: darkred;
+}
+
+
+.content .notifications{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+} 
+
+.content .notification-list {
+    list-style: none;
+}
+
+.content .notification-card {
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    background-color: #f5f2e3;
+    padding: 10px; /* Comfortable padding */
+    margin: 10px 0;
+    border-radius: 8px;
+    max-width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 20px solid #ff9800; /* Thicker border for emphasis */
+    transition: transform 0.3s ease; /* Slight hover effect */
+}
+
+.content .notification-card:hover {
+    transform: scale(1.02); /* Slight hover zoom */
+}
+
+.content  .notification-card .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px; /* Space between header and content */
+}
+
+.content .notification-card .header h3 {
+    margin: 0;
+    font-size: 16px; /* Larger font for city/state */
+    color: #333;
+}
+
+.content .notification-card .state{
+    color: #264653;
+}
+
+.content .notification-card .header .timestamp {
+    font-size: 12px;
+    color: #888;
+}
+
+.content .notification-card .content {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content .notification-card .content p {
+    margin: 4px 0;
+    font-size: 14px; /* Uniform font size */
+    color: #333;
+    width: 48%; /* Two columns */
+}
+
+/* Flex container for metrics and icon */
+.notification-card .metrics-container {
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: space-between; /* Ensures space between metrics and icon */
+    gap: 20px; /* Space between metrics and icon */
+}
+
+.notification-card .metrics {
+    display: flex;
+    flex-direction: column; /* Keeps metrics stacked vertically */
+    gap: 5px; /* Space between individual metrics */
+}
+
+.notification-card .metrics p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+
+
+.notification-card .right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #fff;
+    flex-shrink: 0; /* Prevents icon from shrinking */
+}
+
+
+
+@media (max-width: 600px) {
+    .notification-card .content p {
+      width: 100%; /* Full width on smaller screens */
+    }
+}

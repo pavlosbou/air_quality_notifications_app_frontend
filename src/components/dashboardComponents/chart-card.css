@@ -1,0 +1,23 @@
+.chart-card {
+    background-color: #f9f9f9; /* Light background for the card */
+    border: 1px solid #ddd; /* Subtle border for definition */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Adjust card width */
+}
+
+.chart-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.chart-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
