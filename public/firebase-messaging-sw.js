@@ -2,16 +2,8 @@ importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js')
 importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging-compat.js');
 
 // Initialize the Firebase app in the service worker by passing in the messagingSenderId
-firebase.initializeApp({
-    apiKey: "AIzaSyBj2PWAoTyz8Vgy1aqkRZgqCCLZH4-9RPQ",
-
-    authDomain: "airqualitynotificationsapp.firebaseapp.com",
-    projectId: "airqualitynotificationsapp",
-    storageBucket: "airqualitynotificationsapp.appspot.com",
-    messagingSenderId: "811200398280",
-    appId: "1:811200398280:web:7e86c7a4b3fb43c0a476fd",
-    measurementId: "G-4G28PC88ZB"
-});
+const firebaseConfig = import.meta.env.VITE_FIREBASE_CONFIG;
+firebase.initializeApp(firebaseConfig);
 
 // Retrieve an instance of Firebase Messaging so that it can handle background messages
 const messaging = firebase.messaging();
